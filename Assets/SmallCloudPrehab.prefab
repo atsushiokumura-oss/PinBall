@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6660851776514389612}
   - component: {fileID: 5814552529422955270}
   - component: {fileID: -7823069029195131933}
+  - component: {fileID: 646111433753074689}
   m_Layer: 0
   m_Name: SmallCloudPrehab
   m_TagString: SmallCloudTag
@@ -118,5 +119,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f579a6c3b3929b243a77189c62c477c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &646111433753074689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5814552529422955273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfb3bc9cff97714c9d1b1c64feeedb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
