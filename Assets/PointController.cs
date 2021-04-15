@@ -30,7 +30,6 @@ public class PointController : MonoBehaviour
 
     void OnCollisionEnter (Collision other)
     {
-        Debug.Log("tag=" + tag);
         if (tag == "SmallStarTag"|| tag == "SmallCloudTag")
         {
             point += 5;
