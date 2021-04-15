@@ -6,7 +6,7 @@ public class StarController : MonoBehaviour
 {
     //回転速度
     private float rotSpeed = 0.5f;
-    
+
 
     //Use this for initialization
     
@@ -27,7 +27,7 @@ public class StarController : MonoBehaviour
     {
         //回転
         this.transform.Rotate (0, this.rotSpeed, 0);
-    
+
         
     }
 }
