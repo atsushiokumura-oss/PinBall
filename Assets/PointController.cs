@@ -7,7 +7,11 @@ public class PointController : MonoBehaviour
 {
 
     private GameObject pointText;
-    private float point = 0;
+    private float SmallStarpoint = 0;
+    private float SmallCloudpoint = 0;
+    private float LargeCloudpoint = 0;
+    private float LargeStarpoint = 0;
+
 
 
 
@@ -20,8 +24,10 @@ public class PointController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        string a = point.ToString();
+        float sumpoint = SmallStarpoint + SmallCloudpoint + LargeCloudpoint + LargeStarpoint;
+        //Debug.Log(sumpoint);
+        string a = sumpoint.ToString();
+        Debug.Log(a);
         this.pointText.GetComponent<Text>().text = a;
         
         
@@ -30,14 +36,27 @@ public class PointController : MonoBehaviour
 
     void OnCollisionEnter (Collision other)
     {
-        if (tag == "SmallStarTag"|| tag == "SmallCloudTag")
+
+
+
+        if (other.gameObject.tag == "SmallStarTag")
         {
-            point += 5;
+            SmallStarpoint += 5;
+        }
+        else if (other.gameObject.tag == "SmallCloudTag")
+        {
+            SmallCloudpoint += 5;
+        }
+        else if (other.gameObject.tag == "LargeCloudTag")
+        {
+            LargeCloudpoint += 10;
+
         }
 
-        else if (tag == "LargeCloudTag" || tag == "LargeStarTag")
+
+        else if (other.gameObject.tag == "LargeStarTag")
         {
-            point += 10;
+            LargeStarpoint += 10;
 
         }
     }
