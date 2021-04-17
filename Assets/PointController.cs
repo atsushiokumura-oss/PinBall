@@ -24,11 +24,6 @@ public class PointController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float sumpoint = SmallStarpoint + SmallCloudpoint + LargeCloudpoint + LargeStarpoint;
-        //Debug.Log(sumpoint);
-        string a = sumpoint.ToString();
-        Debug.Log(a);
-        this.pointText.GetComponent<Text>().text = a;
         
         
 
@@ -59,5 +54,10 @@ public class PointController : MonoBehaviour
             LargeStarpoint += 10;
 
         }
+
+        float sumpoint = SmallStarpoint + SmallCloudpoint + LargeCloudpoint + LargeStarpoint;
+        string a = sumpoint.ToString();
+        this.pointText.GetComponent<Text>().text = a;
+
     }
 }
