@@ -12,9 +12,6 @@ public class PointController : MonoBehaviour
     private float LargeCloudpoint = 0;
     private float LargeStarpoint = 0;
 
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -24,16 +21,9 @@ public class PointController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-
     }
-
     void OnCollisionEnter (Collision other)
     {
-
-
-
         if (other.gameObject.tag == "SmallStarTag")
         {
             SmallStarpoint += 5;
@@ -45,14 +35,12 @@ public class PointController : MonoBehaviour
         else if (other.gameObject.tag == "LargeCloudTag")
         {
             LargeCloudpoint += 10;
-
         }
 
 
         else if (other.gameObject.tag == "LargeStarTag")
         {
             LargeStarpoint += 10;
-
         }
 
         float sumpoint = SmallStarpoint + SmallCloudpoint + LargeCloudpoint + LargeStarpoint;
